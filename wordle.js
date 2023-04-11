@@ -51,8 +51,8 @@ function BuildKeyBoard() {
 			letters.splice(0, 0, "ENTER");
 			letters.push("BACK");
 		}
-		keygrid[row] = React.createElement("div", {id: "keygrid" + row},
-			letters.map((letter, ii) => React.createElement(KeyButton, {letter: letter, key: ii*(row+1)}, null)));
+		keygrid[row] = React.createElement("div", {id: "keygrid", key: row},
+			letters.map((letter, ii) => React.createElement(KeyButton, {letter: letter, key: ii}, null)));
 	}
 
 	return keygrid;
